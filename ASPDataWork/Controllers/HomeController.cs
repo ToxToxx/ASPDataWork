@@ -42,11 +42,12 @@ namespace ASPDataWork.Controllers
                 new User {Name = "Matvey", Age = 22},
                 new User {Name = "Sasha", Age = 42},
                 new User {Name = "Oleg", Age = 19},
+                new User {Name = "Maxim", Age = 35},
             };
 
             #endregion
 
-            return View(numbersList);
+            return View(users);
         }
 
 

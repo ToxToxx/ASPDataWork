@@ -1,4 +1,4 @@
-﻿@model IEnumerable<int>
+﻿@model IEnumerable<User>
 @{
     ViewData["Title"] = "PrintValueCollection";
 }
@@ -9,6 +9,6 @@
 <div class="card">
     @foreach(var item in Model)
     {
-        <p class="card_text">@item</p>
+        <p class="card_text">Имя: @item.Name | <br /> Возраст: @item.Age</p>
     }
 </div>
