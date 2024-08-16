@@ -3,21 +3,25 @@
     ViewData["Title"] = "CreateUser";
 }
 
-<div class="card col-md-12">
+<div class="card col-md-8 offset-md-2">
     <form asp-action="CreateUser" asp-controller="Home" method="post">
-        <div asp-validation-summary="All" style="font-size:23px; font-family:Impact" class="text-decoration-none">
-            <div class="mb-3">
-               <label class="form-label"> Name</label>
-               <input type="text" asp-for="Name" class="form-control"/>
-            </div>
-            <div class="mb-3">
-                <label class="form-label"> Age</label>
-                <input type="text" asp-for="Age" class="form-control" />
-            </div>
-            <div>
-                <button class="btn btn-primary float-right" type="submit"> Отправить </button>
-            </div>
+        <!-- Поле для ввода имени -->
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label">Имя</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <!-- Поле для ввода возраста -->
+        <div class="mb-3">
+            <label asp-for="Age" class="form-label">Возраст</label>
+            <input asp-for="Age" class="form-control" />
+            <span asp-validation-for="Age" class="text-danger"></span>
+        </div>
+
+        <!-- Кнопка отправки -->
+        <div class="text-right">
+            <button class="btn btn-primary" type="submit">Отправить</button>
         </div>
     </form>
 </div>
-

@@ -6,9 +6,12 @@ namespace ASPDataWork.Models
     {
         [Key]
         public int Id { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Введите имя")]
+        [MaxLength(50, ErrorMessage = "Длина не должна быть больше 50 символов")]
         public string Name { get; set; }
-        [Range(1, 110)]
+
+        [Required(ErrorMessage = "Введите возраст")]
+        [Range(1, 110, ErrorMessage = "Недопустимыый возраст")]
         public int Age { get; set; }
 
         public User() { }
