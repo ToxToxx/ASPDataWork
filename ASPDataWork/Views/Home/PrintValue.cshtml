@@ -1,9 +1,10 @@
-﻿@model int
+﻿@model User
 @{
     ViewData["Title"] = "PrintValue";
 }
 
 <div class="card col-md-12">
-    <p class="text-center">@Model</p>
+    <p class="text-center">Имя: @Model.Name</p>
+    <p class="text-center">Возраст: @Model.Age</p>
 </div>
 

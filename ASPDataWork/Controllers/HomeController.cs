@@ -24,10 +24,15 @@ namespace ASPDataWork.Controllers
             string name = "Andrey";
             var user = new User { Name = name, Age = age };
             
-            return View(age);
+            return View(user);
         }
 
         #endregion
+
+        #region Коллекция #2
+
+        #endregion
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
