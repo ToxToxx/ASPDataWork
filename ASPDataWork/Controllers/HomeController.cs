@@ -15,7 +15,7 @@ namespace ASPDataWork.Controllers
 
         public IActionResult Index() => View();
 
-        #region Вывод значений #1
+        #region Print Values #1
 
         [HttpGet]
         public IActionResult PrintValue()
@@ -29,7 +29,26 @@ namespace ASPDataWork.Controllers
 
         #endregion
 
-        #region Коллекция #2
+        #region Collection #2
+
+        [HttpGet]
+        public IActionResult PrintValueCollection()
+        {
+            #region Print Collection
+            var numbersList = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            var numbersArray = new string[] { "1", "2", "3", };
+            var users = new List<User>
+            {
+                new User {Name = "Matvey", Age = 22},
+                new User {Name = "Sasha", Age = 42},
+                new User {Name = "Oleg", Age = 19},
+            };
+
+            #endregion
+
+            return View(numbersList);
+        }
+
 
         #endregion
 
