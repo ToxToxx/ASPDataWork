@@ -1,0 +1,42 @@
+﻿/* body styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* card Container */
+.card {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Styles for cards */
+.card_text {
+    background-color: #ff6a00;
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+    /* On Hover styles */
+    .card_text:hover {
+        transform: scale(1.05);
+        background-color: #e65c00;
+    }
