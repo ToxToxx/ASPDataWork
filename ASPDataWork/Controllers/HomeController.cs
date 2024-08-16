@@ -13,15 +13,21 @@ namespace ASPDataWork.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index() => View();
+
+        #region Вывод значений #1
+
+        [HttpGet]
+        public IActionResult PrintValue()
         {
-            return View();
+            int age = 16;
+            string name = "Andrey";
+            var user = new User { Name = name, Age = age };
+            
+            return View(age);
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+        #endregion
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
