@@ -1,0 +1,14 @@
+﻿@model IEnumerable<int>
+@{
+    ViewData["Title"] = "PrintValueCollection";
+}
+
+<link rel="stylesheet" href="~/css/card.css" />
+<h1 class="text-center" >PrintValueCollection</h1>
+
+<div class="card">
+    @foreach(var item in Model)
+    {
+        <p class="card_text">@item</p>
+    }
+</div>
