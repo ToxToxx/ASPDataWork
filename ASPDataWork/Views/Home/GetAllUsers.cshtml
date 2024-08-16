@@ -1,0 +1,27 @@
+﻿@model IEnumerable<ASPDataWork.Models.User>
+
+@{
+    ViewData["Title"] = "Get All Users";
+}
+
+<h1>Get All Users</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Имя</th>
+            <th>Возраст</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Id</td>
+                <td>@user.Name</td>
+                <td>@user.Age</td>
+            </tr>
+        }
+    </tbody>
+</table>
